@@ -14,7 +14,7 @@ namespace BusinessLayer.Services
             else if (Id.Length == 4)
                 return "10" + Id;
             else
-                throw new ArgumentException("Invalid ID");
+                return "Invalid ID";
         }
     }
 }
