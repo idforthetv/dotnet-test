@@ -7,16 +7,12 @@ namespace BusinessLayer.Services
 {
     public class OrchestrationService : IOrchestrationService
     {
-        public string FetchInternalId(string Id)
+        private int number;
+        public int FetchInternalId(string Id)
         {
-            if (!Int32.TryParse(Id, out int number))
-                return "Invalid ID. ID must be a number!";
-            if (Id.Length == 3)
-                return "100" + Id;
-            else if (Id.Length == 4)
-                return "10" + Id;
-            else
-                return "Invalid ID. ID must be 3 or 4 digits!";
+            if (!Int32.TryParse(Id, out number) || number > 9999 || number < 100)
+                throw new ArgumentException("Invalid Id.");
+            return 100000 + number;
         }
     }
 }
