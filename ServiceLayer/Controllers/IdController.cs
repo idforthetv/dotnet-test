@@ -21,7 +21,7 @@ namespace ServiceLayer.Controllers
         }
 
         [HttpGet("GetInternalId")]
-        public ActionResult<string> GetInternalId(string Id)
+        public ActionResult<int> GetInternalId(string Id)
         {
             return _service.FetchInternalId(Id);
         }

@@ -6,6 +6,6 @@ namespace BusinessLayer.Interfaces
 {
     public interface IOrchestrationService
     {
-        string FetchInternalId(string Id);
+        int FetchInternalId(string Id);
     }
 }
