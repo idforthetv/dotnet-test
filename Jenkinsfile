@@ -4,7 +4,8 @@ pipeline {
     stage('Initialize') {
       steps {
         echo 'Pipeline Starting'
-        sh 'echo oc status'
+        sh '''oc status
+'''
       }
     }
 
