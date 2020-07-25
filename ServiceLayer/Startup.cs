@@ -32,7 +32,7 @@ namespace ServiceLayer
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "IdConvertAPI",
+                    Title = $"IdConvertAPI_{Configuration.GetValue(typeof(string), "env", "")}",
                 }); 
             });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
